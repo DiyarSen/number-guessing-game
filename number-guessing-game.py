@@ -3,24 +3,26 @@ import random
 number_guess = random.randint(0,100)
 right_entry = 10
 
+print("It's between 0 - 100")
+
 while right_entry > 0:
-    guess = int(input("Tahmininiz: "))
+    guess = int(input("What is your guess? "))
 
     if guess <= 0:
-        print("Pozitif bir sayı giriniz")
+        print("Please enter a positive number!")
         continue
 
     right_entry -= 1
 
     if number_guess == guess:
-        print("Doğru tahmin, tebrikler :)")
+        print("Right guess, congrats :)")
         break
 
     elif number_guess > guess:
-        print(f"YUKARI! Kalan hakkınız: {right_entry}")
+        print(f"UP! Your remaining right is: {right_entry}")
 
     else :
-        print(f"AŞAĞI! Kalan hakkınız: {right_entry}")
+        print(f"DOWN! Your remaining right is: {right_entry}")
 
     if right_entry == 0 :
-        print (f"Tahmin hakkınız kalmadı. Doğru sayı: {number_guess}")
+        print (f"Your rights are done. The right number is: {number_guess}")
